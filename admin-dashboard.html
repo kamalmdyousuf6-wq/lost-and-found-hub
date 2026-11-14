@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin dashboard | Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <a class="brand admin-brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a>
+    <div class="sidebar-label">WORKSPACE</div>
+    <nav class="admin-nav" aria-label="Admin navigation">
+      <a class="active" href="#overview" data-section="overview"><span>▦</span> Overview</a>
+      <a href="#lost-reports" data-section="lost-reports"><span>⌕</span> Lost reports <b>8</b></a>
+      <a href="#found-items" data-section="found-items"><span>▣</span> Found items received <b>5</b></a>
+      <a href="#matches" data-section="matches"><span>⇄</span> Possible matches <b>3</b></a>
+      <a href="#recovery-requests" data-section="recovery-requests"><span>✓</span> Recovery requests <b>2</b></a>
+      <a href="#contact-requests" data-section="contact-requests"><span>✉</span> Contact requests <b>4</b></a>
+      <a href="#recovered" data-section="recovered"><span>↗</span> Recovered items</a>
+      <a href="#users" data-section="users"><span>♙</span> Users</a>
+    </nav>
+    <div class="sidebar-bottom">
+  <div class="admin-profile">
+    <span class="avatar">AD</span>
+    <span>
+      <strong>Admin Demo</strong>
+      <small>Campus administrator</small>
+    </span>
+    <button id="adminMenuButton" type="button" aria-label="Admin menu">•••</button>
+  </div>
+
+  <a class="sidebar-home-link" href="index.html">← View public site</a>
+
+  <button class="button button-secondary button-block"
+          type="button" data-logout>
+    Logout
+  </button>
+</div>
+  </aside>
+  <main class="admin-main">
+    <header class="admin-topbar"><div><button class="admin-mobile-menu" id="adminMobileMenu" type="button" aria-label="Toggle admin navigation">☰</button><span class="breadcrumb">Workspace / <strong id="currentSectionName">Overview</strong></span></div><div class="admin-top-actions"><span class="admin-today">Campus Admin Demo</span><button class="notification-button" type="button" aria-label="Notifications">♧<i></i></button><span class="avatar">AD</span></div></header>
+    <div class="admin-content">
+      <div class="admin-welcome"><div><span class="eyebrow">SATURDAY, OCTOBER 3, 2026</span><h1 id="sectionTitle">Good morning, Admin <span>👋</span></h1><p id="sectionSubtitle">Here’s what’s happening across your lost and found hub today.</p></div><button class="button button-primary" id="quickAddButton" type="button">+ Add found item</button></div>
+      <section id="overviewSection" class="dashboard-view">
+        <div class="stat-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-blue">⌕</span><span class="stat-change">+12% this week</span></div><p>Open lost reports</p><strong id="statLostReports">0</strong><small>Across all categories</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-orange">▣</span><span class="stat-change">+3 this week</span></div><p>Items in custody</p><strong id="statFoundItems">0</strong><small>Awaiting owner verification</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-purple">⇄</span><span class="stat-change neutral">Needs review</span></div><p>Possible matches</p><strong id="statPossibleMatches">0</strong><small>From recent reports</small></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-green">✓</span><span class="stat-change">+5 this week</span></div><p>Recovered this month</p><strong id="statRecoveredItems">0</strong><small>Successfully returned</small></article>
+        </div>
+        <div class="dashboard-columns">
+          <section class="dashboard-card activity-card"><div class="card-heading"><div><h2>Recent activity</h2><p>Latest updates across your hub</p></div><button class="text-button" data-go-section="lost-reports" type="button">View all →</button></div><div class="activity-list">
+            <article class="activity-row"><span class="activity-icon activity-blue">⌕</span><div><strong>New lost report submitted</strong><p>Wireless earbuds · Main Library</p></div><time>12 min ago</time></article>
+            <article class="activity-row"><span class="activity-icon activity-orange">▣</span><div><strong>Found item received</strong><p>Student ID card · Admin office</p></div><time>38 min ago</time></article>
+            <article class="activity-row"><span class="activity-icon activity-purple">⇄</span><div><strong>Possible match identified</strong><p>Black backpack · Science Building</p></div><time>2 hours ago</time></article>
+            <article class="activity-row"><span class="activity-icon activity-green">✓</span><div><strong>Item marked as recovered</strong><p>Blue water bottle · Student Centre</p></div><time>Yesterday</time></article>
+          </div></section>
+          <section class="dashboard-card quick-actions"><div class="card-heading"><div><h2>Quick actions</h2><p>Common administration tasks</p></div></div><button data-go-section="found-items" type="button"><span class="quick-icon">＋</span><span><strong>Record a found item</strong><small>Add an item received by the office</small></span><span>→</span></button><button data-go-section="matches" type="button"><span class="quick-icon purple">⇄</span><span><strong>Review possible matches</strong><small>8 matches waiting for review</small></span><span>→</span></button><button data-go-section="recovery-requests" type="button"><span class="quick-icon green">✓</span><span><strong>Verify recovery requests</strong><small>2 requests need your attention</small></span><span>→</span></button></section>
+        </div>
+        <section class="dashboard-card table-card"><div class="card-heading"><div><h2>Needs your attention</h2><p>Items awaiting administration review</p></div><button class="text-button" data-go-section="recovery-requests" type="button">View queue →</button></div><div class="table-scroll"><table><thead><tr><th>ITEM</th><th>TYPE</th><th>LOCATION</th><th>REPORTED</th><th>STATUS</th><th></th></tr></thead><tbody id="attentionTable"></tbody></table></div></section>
+      </section>
+      <section id="tableSection" class="dashboard-view hidden"><section class="dashboard-card table-card"><div class="card-heading"><div><h2 id="tableHeading">Records</h2><p id="tableDescription">Demo records for administration</p></div><div class="table-actions"><input id="adminSearch" type="search" placeholder="Search records"><button class="button button-primary button-small" id="tableAddButton" type="button">+ Add record</button></div></div><div class="table-scroll"><table><thead id="adminTableHead"></thead><tbody id="adminTableBody"></tbody></table></div></section></section>
+      <footer class="admin-footer">Lost &amp; Found Hub · Administration dashboard <span>Frontend demo with sample data</span></footer>
+    </div>
+  </main>
+  <div id="adminModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card"><button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button><span class="eyebrow">Administration</span><h2 id="modalTitle">Record found item</h2><p id="modalDescription">Add a physical item received by administration.</p>
+      <form id="adminItemForm" class="form-grid">
+        <div class="field"><label for="adminItemTitle">Item title</label><input id="adminItemTitle" name="title" required placeholder="e.g. Black umbrella"></div>
+        <div class="field"><label for="adminItemCategory">Category</label><select id="adminItemCategory" name="category" required><option value="">Choose category</option><option>Electronics</option><option>Bags &amp; wallets</option><option>Clothing</option><option>Keys</option><option>Books &amp; stationery</option><option>Accessories</option><option>Other</option></select></div>
+        <div class="field"><label for="adminItemLocation">Location found</label><input id="adminItemLocation" name="location" required placeholder="e.g. Main Library"></div>
+        <div class="field"><label for="adminItemDate">Date found</label><input id="adminItemDate" name="date" type="date" required></div>
+        <div class="field field-full"><label for="adminItemDescription">Description</label><textarea id="adminItemDescription" name="description" rows="3" required></textarea></div>
+        <div class="field field-full"><label class="checkbox-label"><input type="checkbox" required> I confirm this physical item has been received by administration.</label></div>
+        <div class="field field-full"><button class="button button-primary button-block" type="submit">Save found item</button></div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

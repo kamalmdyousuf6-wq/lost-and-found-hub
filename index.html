@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Report lost items, browse possible matches, and work with campus administration to recover belongings.">
+  <title>Lost & Found Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+  <a href="browse.html">Browse items</a>
+  <a href="report-lost.html">Report lost</a>
+  <a href="report-found.html">Submit found item</a>
+  <a href="notifications.html">Notifications</a>
+  <a href="login.html" data-login-link>Sign in</a>
+  <a class="button button-small button-primary" href="admin-login.html">Admin</a>
+  <button class="button button-small button-secondary"
+          type="button" data-logout>
+    Logout
+  </button>
+</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="status-dot"></span> Campus community service</span>
+          <h1>Lost something?<br><span>Let’s bring it home.</span></h1>
+          <p class="hero-tagline">Report. Match. Recover.</p>
+          <p class="hero-description">
+            Lost &amp; Found Hub helps your campus community report missing belongings and identify possible matches.
+            The administration manages found items and verifies ownership before returning them.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="report-lost.html">Report Lost Item <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="browse.html">Browse Items</a>
+          </div>
+          <a class="subtle-link" href="report-found.html">Found something? Submit it to administration <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of found belongings">
+          <div class="visual-orbit orbit-one"></div>
+          <div class="visual-orbit orbit-two"></div>
+          <div class="floating-card card-wallet"><span class="item-emoji">👛</span><span><strong>Wallet</strong><small>Found · Library</small></span><span class="mini-check">✓</span></div>
+          <div class="floating-card card-keys"><span class="item-emoji">🔑</span><span><strong>Keyring</strong><small>Possible match</small></span></div>
+          <div class="hero-illustration"><span class="illustration-spark spark-one">✦</span><span class="illustration-spark spark-two">✦</span><div class="illustration-circle"><span>🔎</span></div><div class="illustration-base"></div></div>
+          <div class="visual-caption"><span class="caption-icon">✓</span> Managed by your campus team</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <div><span class="eyebrow">A simple, safe process</span><h2>From missing to <span class="text-accent">recovered.</span></h2></div>
+        <p>Every found item is handled by administration. You stay in the loop while we help make the right connection.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><span class="step-icon icon-blue">📝</span><h3>Report it</h3><p>Tell us what you lost, when, and where. A clear description helps identify possible matches.</p></article>
+        <article class="step-card"><span class="step-number">02</span><span class="step-icon icon-orange">📦</span><h3>We match it</h3><p>Found belongings are submitted to the administration and compared with lost reports.</p></article>
+        <article class="step-card"><span class="step-number">03</span><span class="step-icon icon-green">🤝</span><h3>Recover it</h3><p>Contact the administration. They verify ownership and arrange a safe handover.</p></article>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container cta-panel">
+        <div><span class="eyebrow">Have you seen it?</span><h2>Start with a quick search.</h2><p>Browse reports and items received by your campus administration.</p></div>
+        <a class="button button-dark" href="browse.html">Explore items <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content"><a class="brand footer-brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><p>Campus belongings, cared for by your administration.</p><div class="footer-links"><a href="contact-admin.html">Contact administration</a><a href="admin-login.html">Admin portal</a></div><small>© 2025 Lost &amp; Found Hub · Frontend demo</small></div>
+  </footer>
+</body>
+</html>

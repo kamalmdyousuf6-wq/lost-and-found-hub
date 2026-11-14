@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links"><a href="browse.html">Browse items</a><a href="report-lost.html">Report lost</a><a href="report-found.html">Submit found item</a><a class="active" href="login.html">Sign in</a><a class="button button-small button-primary" href="admin-login.html">Admin</a></div>
+  </nav></header>
+  <main class="auth-page container">
+    <section class="auth-card">
+      <a class="back-link" href="index.html">← Home</a>
+      <div class="auth-heading"><span class="brand-mark">L</span><span class="eyebrow">Welcome back</span><h1>Sign in</h1><p>Access your Lost &amp; Found Hub account.</p></div>
+      <form data-auth-form="login">
+        <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@college.edu"></div>
+        <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" required autocomplete="current-password" placeholder="Enter your password"></div>
+        <button class="button button-primary button-block" type="submit">Sign in <span aria-hidden="true">→</span></button>
+        <div class="form-feedback" aria-live="polite"></div>
+      </form>
+      <p class="auth-switch">New here? <a href="register.html">Create an account</a></p>
+      <p class="auth-footnote">Frontend demo only. No account is authenticated or created.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><a class="brand footer-brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><p>Managed by your campus administration.</p><div class="footer-links"><a href="contact-admin.html">Contact administration</a></div><small>© 2025 Lost &amp; Found Hub · Frontend demo</small></div></footer>
+</body>
+</html>

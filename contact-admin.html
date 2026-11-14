@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact administration | Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/contact-admin.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links"><a href="browse.html">Browse items</a><a href="report-lost.html">Report lost</a><a href="report-found.html">Submit found item</a><a href="login.html">Sign in</a><a class="button button-small button-primary" href="admin-login.html">Admin</a></div>
+  </nav></header>
+  <main class="page-main container narrow-container">
+    <a class="back-link" href="browse.html">← Back to browse</a>
+    <div class="form-intro"><span class="eyebrow">We’re here to help</span><h1>Contact administration</h1><p>Found a possible match? Send a request so the administration can review it and help verify ownership.</p></div>
+    <div class="important-notice"><span class="notice-icon">🛡️</span><div><strong>Safe returns start with verification.</strong><p>Do not contact another user directly. Administration will verify ownership and coordinate the physical handover.</p></div></div>
+    <form class="form-card" id="contactAdminForm">
+      <div class="form-grid">
+        <div class="field"><label for="name">Your name <span>*</span></label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="item">Item or report <span>*</span></label><input id="item" name="item" required placeholder="e.g. Black backpack, report #LF-204"></div>
+        <div class="field"><label for="requestType">Request type <span>*</span></label><select id="requestType" name="requestType" required><option value="">Choose a request</option><option value="possible-match">I may have found a match</option><option value="recovery">I would like to claim an item</option><option value="general">General question</option></select></div>
+        <div class="field field-full"><label for="message">Message <span>*</span></label><textarea id="message" name="message" rows="5" required placeholder="Share details that can help administration review your request. Avoid posting private verification details on public listings."></textarea></div>
+      </div>
+      <div class="form-notice"><span>🔒</span><p>Your request goes to the administration. Finder and owner contact details are not shared with each other.</p></div>
+      <div class="form-actions"><button class="button button-primary" type="submit">Send request <span aria-hidden="true">→</span></button><a class="cancel-link" href="browse.html">Cancel</a></div>
+      <div class="form-feedback" aria-live="polite"></div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><a class="brand footer-brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><p>Managed by your campus administration.</p><div class="footer-links"><a href="admin-login.html">Admin portal</a></div><small>© 2025 Lost &amp; Found Hub · Frontend demo</small></div></footer>
+</body>
+</html>

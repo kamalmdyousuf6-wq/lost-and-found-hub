@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a lost item | Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/report.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><nav class="navbar container" aria-label="Main navigation">
+    <a class="brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links"><a href="browse.html">Browse items</a><a class="active" href="report-lost.html">Report lost</a><a href="report-found.html">Submit found item</a><a href="login.html">Sign in</a><a class="button button-small button-primary" href="admin-login.html">Admin</a></div>
+  </nav></header>
+  <main class="page-main container narrow-container">
+    <a class="back-link" href="index.html">← Home</a>
+    <div class="form-intro"><span class="eyebrow">Let’s look for it</span><h1>Report a lost item</h1><p>Give us a few details so the administration can compare your report with items received.</p></div>
+    <form class="form-card" data-report-form="lost">
+      <div class="form-section-title"><span>01</span><div><h2>Your details</h2><p>We’ll use these details if administration needs to follow up.</p></div></div>
+      <div class="form-grid">
+        <div class="field"><label for="name">Name <span>*</span></label><input id="name" name="name" required autocomplete="name" placeholder="Your full name"></div>
+        <div class="field"><label for="email">Email <span>*</span></label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@college.edu"></div>
+      </div>
+      <div class="form-section-title"><span>02</span><div><h2>Item details</h2><p>Specific details help us identify a possible match.</p></div></div>
+      <div class="form-grid">
+        <div class="field"><label for="title">Item title <span>*</span></label><input id="title" name="title" required placeholder="e.g. Navy blue backpack"></div>
+        <div class="field"><label for="category">Category <span>*</span></label><select id="category" name="category" required><option value="">Choose a category</option><option>Electronics</option><option>Bags &amp; wallets</option><option>Clothing</option><option>Keys</option><option>Books &amp; stationery</option><option>Accessories</option><option>Other</option></select></div>
+        <div class="field field-full"><label for="description">Description <span>*</span></label><textarea id="description" name="description" required rows="4" placeholder="Describe the item, including color, brand, size, or other visible details."></textarea></div>
+        <div class="field"><label for="date">Date lost <span>*</span></label><input id="date" name="date" type="date" required></div>
+        <div class="field"><label for="location">Location lost <span>*</span></label><input id="location" name="location" required placeholder="e.g. Main Library, second floor"></div>
+        <div class="field field-full"><label for="identifying">Identifying details</label><textarea id="identifying" name="identifying" rows="3" placeholder="Private details that can help verify ownership. These won’t appear on the public listing."></textarea><small>Keep one or two details private so administration can verify the item belongs to you.</small></div>
+        <div class="field field-full"><label for="image">Image <span class="optional-label">Optional</span></label><input id="image" name="image" type="file" accept="image/*"><small>Image selection is for this frontend demo only; files are not uploaded.</small></div>
+      </div>
+      <div class="form-notice"><span>🔒</span><p>Your email and private identifying details are visible only to administration in this demo.</p></div>
+      <div class="form-actions"><button class="button button-primary" type="submit">Submit lost report <span aria-hidden="true">→</span></button><a class="cancel-link" href="index.html">Cancel</a></div>
+      <div class="form-feedback" aria-live="polite"></div>
+    </form>
+  </main>
+  <footer class="site-footer"><div class="container footer-content"><a class="brand footer-brand" href="index.html"><span class="brand-mark">L</span> Lost &amp; Found Hub</a><p>Managed by your campus administration.</p><div class="footer-links"><a href="contact-admin.html">Contact administration</a></div><small>© 2025 Lost &amp; Found Hub · Frontend demo</small></div></footer>
+</body>
+</html>
