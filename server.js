@@ -19,7 +19,7 @@ app.listen(port, "0.0.0.0", () => {
 }
 
 start().catch(error => {
-  console.error("Failed to start API:", error.message);
+  console.error("Failed to start API:", error);
   process.exit(1);
 });
 
