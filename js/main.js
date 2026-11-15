@@ -1,6 +1,6 @@
 // Shared Lost & Found Hub helpers
 window.LFH = {
-    API_BASE: "http://localhost:3000/api",
+    API_BASE: "https://lost-and-found-hub-production.up.railway.app/api",
 escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, character => ({
         "&": "&amp;",
